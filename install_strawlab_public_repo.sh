@@ -1,7 +1,8 @@
 #!/bin/bash -x
 set -e
 
-apt-get --yes install wget
+sudo apt-get --yes update
+apt-get --yes install wget lsb-release
 
 # Download the keyring
 wget --output-document=/tmp/astraw-archive-keyring.gpg http://debs.strawlab.org/astraw-archive-keyring.gpg
@@ -15,7 +16,3 @@ echo "deb-src http://debs.strawlab.org/ $(lsb_release -cs)/" | sudo tee -a /etc/
 
 # Update the package list
 sudo apt-get --yes update
-
-wget http://strawlab.org/rosinstall/scripts/run_check_electric.bash -O /tmp/run_check_electric.bash
-chmod a+x /tmp/run_check_electric.bash
-source /tmp/run_check_electric.bash
