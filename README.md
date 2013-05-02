@@ -12,7 +12,7 @@ Electric installation up and running an Amazon AWS using Ubuntu
     export AWS_REGION="us-east-1"		     
     export AWS_AMI="ami-7747d01e" # 12.04 release
 
-Make sure you have [Vagrant][http://www.vagrantup.com] installed with the
+Make sure you have [Vagrant](http://www.vagrantup.com) installed with the
 AWS plugin. Then type:
 
     vagrant up --provider=aws
